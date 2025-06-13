@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head><title>Search Results</title>
+        <title>Online Bookstore</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+      </head>
+<body>
+  <h2>Results for "{{ query }}"</h2>
+  <a href="/">Back to Catalog</a>
+  <ul>
+    {% for book in books %}
+      <li>{{ book.title }} by {{ book.author }}</li>
+    {% else %}
+      <li>No books found</li>
+    {% endfor %}
+  </ul>
+</body>
+</html>
