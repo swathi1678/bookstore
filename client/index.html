@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bookstore Inventory</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>📚 Bookstore Inventory</h1>
+  <form id="searchForm">
+    <input type="text" id="title" placeholder="Title">
+    <input type="text" id="author" placeholder="Author">
+    <select id="available">
+      <option value="">All</option>
+      <option value="true">Available</option>
+      <option value="false">Out of Stock</option>
+    </select>
+    <button type="submit">Search</button>
+  </form>
+
+  <div id="bookList"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f4f8;
+    padding: 20px;
+    color: #333;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #4a148c;
+  }
+  
+  form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  input, select, button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  #bookList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+    padding: 10px;
+  }
+  
+  .book-card {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
