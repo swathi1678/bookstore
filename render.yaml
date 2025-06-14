@@ -1,7 +1,15 @@
-runtime: python310
-entrypoint: gunicorn -b :$PORT main:app
+services:
+  - type: web
+    name: bookstore-api
+    env: node
+    buildCommand: cd server && npm install
+    startCommand: node index.js
+    envVars:
+      - key: MONGO_URI
+        value: mongodb+srv://cloud1:<25M7BoXmjchSE2Xi>@cluster0.3jm9f.mongodb.net/
 
-instance_class: F1
-
-env_variables:
-  GOOGLE_CLOUD_PROJECT: "your-gcp-project-id"
+  - type: web
+    name: bookstore-client
+    env: static
+    buildCommand: echo "no build"
+    staticPublishPath: client
